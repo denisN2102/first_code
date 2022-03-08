@@ -1,0 +1,32 @@
+.dialogs {
+  display: flex;
+}
+.dialogsItems {
+  padding: 10px;
+}
+
+.messages {
+}
+
+.message {
+}
+.wrapper button {
+  margin-left: 425px;
+  display: block;
+  margin-top: 5px;
+  width: 125px;
+  height: 50px;
+  background-color: wheat;
+  border-radius: 25px;
+}
+.txt {
+  font-size: 20px;
+  color: chocolate;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
