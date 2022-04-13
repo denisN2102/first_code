@@ -1,0 +1,14 @@
+.image {
+  height: 150px;
+  width: 150px;
+}
+.numbers {
+  cursor: pointer;
+}
+.numbers {
+  font-weight: bold;
+}
+.numba {
+  display: flex;
+  justify-content: center;
+}
