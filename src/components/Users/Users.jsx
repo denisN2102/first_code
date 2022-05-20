@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import classes from "./Users.module.css";
 import userPhoto from "./../../images/219983.png";
+import { NavLink } from "react-router-dom";
 
 const Users = (props) => {
   const [shownPages, setShownPages] = useState(20);
   const [pages, setPages] = useState([]);
   let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
-  const array = [10, 20, 30, 40, 50, 60];
 
   // const array1 = array.map((element) => {
   //   return element + 2;
@@ -14,9 +14,6 @@ const Users = (props) => {
   // const array2 = array.forEach((element, index, arr) => {
   //   return element + 1;
   // });
-
-  console.log(array.splice(1, 2));
-  console.log(array);
 
   // [1 2 3 4]
 
@@ -36,7 +33,7 @@ const Users = (props) => {
       >
         Button
       </button>
-      <div className={classes.numba}>
+      <div>
         {pages.slice(0, shownPages).map((p, index) => (
           <span
             className={props.currentPage === p ? classes.numbers : null}
@@ -54,10 +51,12 @@ const Users = (props) => {
         <div key={u.id}>
           <span>
             <div>
-              <img
-                className={classes.image}
-                src={u.photos.small != null ? u.photos.small : userPhoto}
-              ></img>
+              <NavLink to={"/profile"}>
+                <img
+                  className={classes.image}
+                  src={u.photos.small != null ? u.photos.small : userPhoto}
+                ></img>
+              </NavLink>
             </div>
             <div>
               {u.followed ? (

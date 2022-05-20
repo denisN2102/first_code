@@ -14,6 +14,7 @@ import StoreContext from "./StoreContext";
 import { post, message, dialog } from "./data";
 import Users from "./components/Users/UsersCS";
 import UsersContainer from "./components/Users/UsersContainer";
+import ProfileContainer from "./components/Profile/ProfileContainer";
 
 const App = () => {
   const [posts, setPosts] = useState([...post]);
@@ -32,7 +33,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Main />}></Route>
               <Route path="/Users" element={<UsersContainer />}></Route>
-              <Route path="/profile" element={<Profile />}></Route>
+              <Route path="/profile" element={<ProfileContainer />}></Route>
               <Route exact path="/dialogs" element={<Dialogs />}></Route>
               <Route path="/news" element={<News />}></Route>
               <Route path="/music" element={<Music />}></Route>

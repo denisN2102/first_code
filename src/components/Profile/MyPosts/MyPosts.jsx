@@ -58,7 +58,3 @@ function MyPosts() {
 }
 
 export default MyPosts;
-
-const babak = () => {
-  return <footer></footer>;
-};

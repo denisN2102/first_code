@@ -4,7 +4,7 @@ import MyPosts from "./MyPosts/MyPosts";
 import classes from "./Profile.module.css";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
-function Profile() {
+function Profile(props) {
   const array = [
     { id: 1, name: "babis" },
     { id: 2, name: "FHs" },
@@ -25,7 +25,7 @@ function Profile() {
 
   return (
     <div>
-      <ProfileInfo />
+      <ProfileInfo profile={props.props} />
       <MyPosts />;
     </div>
   );
